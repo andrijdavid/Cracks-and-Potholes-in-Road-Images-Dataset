@@ -5,7 +5,7 @@ import numpy as np
 import datetime
 from pycococreatortools import pycococreatortools
 from tqdm import tqdm
-p = 'Dataset'
+p = 'Cracks-and-Potholes-in-Road-Images-Dataset/Dataset'
 
 
 INFO = {
@@ -74,7 +74,7 @@ for d in tqdm(dirs):
         if annotation_info is not None:
             coco_output["annotations"].append(annotation_info)
             segmentation_id = segmentation_id + 1
-        image_id = image_id + 1
+    image_id = image_id + 1
 
 with open('coco.json', 'w') as output_json_file:
      json.dump(coco_output, output_json_file)
